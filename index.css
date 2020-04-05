@@ -1,0 +1,26 @@
+.main-page {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main-page .links {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-container {
+    margin: 10px;
+}
+
+.link-container a {
+    color: blueviolet;
+    text-decoration: none;
+}
+.link-container a:hover {
+    opacity: 0.5;
+}

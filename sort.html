@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./sort.css" />
+    <script src="./common-function.js"></script>
+    <script src="./bubble-sort.js"></script>
+    <script src="./selection-sort.js"></script>
+    <script src="./sort-index.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a class="link" href='./index.html'>< Back</a>
+            </div>
+            <div class="control-container">
+                <div class="input-container">
+                    <label for="dataSetSize">Size</label>
+                    <input id="dataSetSize" type="number" step="1" />
+                </div>
+
+                <div class="input-container">
+                    <label for="maxValue">Max Number</label>
+                    <input id="maxValue" type="number" step="1" />
+                </div>
+
+                <button class="btn-style" id="generateBlockBtn">Generate</button>
+                <button class="btn-style" id="bubbleSortBtn">Bubble Sort</button>
+                <button class="btn-style" id="selectionSortBtn">Selection Sort</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="blockContainer" class="blocks-wrapper">
+        </div>
+    </main>
+</body>
+
+</html>

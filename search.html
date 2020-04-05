@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./search.css" />
+    <script src="./common-function.js"></script>
+    <script src="./linear-search.js"></script>
+    <script src="./binary-search.js"></script>
+    <script src="./search-index.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a class="link" href='./index.html'>< Back</a>
+            </div>
+
+            <div class="control-container">
+                <div class="input-container">
+                    <label for="dataSetSize">Size</label>
+                    <input id="dataSetSize" type="number" step="1" />
+                </div>
+    
+                <div class="input-container">
+                    <label for="maxValue">Max Number</label>
+                    <input id="maxValue" type="number" step="1"/>
+                </div>
+                
+                <button class="btn-style" id="generateBlockBtn">Generate</button>
+                
+                <div class="input-container">
+                    <label for="searchNumberInput">Search Number</label>
+                    <input id="searchNumberInput" type="number" step="1" />
+                </div>
+
+                <button class="btn-style" id="linearSearchBtn">Linear Search</button>
+                <button class="btn-style" id="binarySearchBtn">Binary Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-header-container">
+            <div class="low-mid-high-section hidden">
+                <div class="box-container">
+                    <div>Low</div>
+                    <div id="lowIndexValue" class="box">
+                    </div>
+                </div>
+    
+                <div class="box-container">
+                    <div>Mid</div>
+                    <div id="midIndexValue" class="box">
+                    </div>
+                </div>
+    
+                <div class="box-container">
+                    <div>High</div>
+                    <div id="highIndexValue" class="box">
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div>Search Value</div>
+                <div id="valueToSearch" class="box"></div>
+            </div>
+
+            <div class="box-container">
+                <label>Result</label>
+                <div id="result" class="box"></div>
+            </div>
+        </div>
+
+        <div id="blockContainer" class="blocks-wrapper">
+        </div>
+    </main>
+</body>
+
+</html>
