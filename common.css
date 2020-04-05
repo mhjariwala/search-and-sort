@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 50px;
+    padding: 10px;
+}
+
+main {
+    height: calc(100vh - 50px);
+    padding: 10px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-container {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: blueviolet;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 10px;
+    
+}
+
+.link:hover {
+    opacity: 0.5;
+}
+
+.btn-style {
+    background: blueviolet;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.input-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input[type=number] {
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9, 0.9);
+}
+
+.highlight-container {
+    height: 50px;
+}
+
+.blocks-wrapper {
+    padding: 10px;
+    height: 400px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.disabled {
+    pointer-events: none;
+    background: rgba(1,1,1, 0.2);    
+}
