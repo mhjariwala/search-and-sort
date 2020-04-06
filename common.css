@@ -24,13 +24,24 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .control-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
+.dataset-generate-controllers {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.visualization-controllers {
+    display: flex;
+    margin-bottom: 5px;
+}
 .link {
     color: blueviolet;
     text-decoration: none;
@@ -50,6 +61,7 @@ header nav {
     outline: none;
     border: none;
     height: 30px;
+    white-space: nowrap;
     margin-left: 10px;
     margin-right: 10px;
 }
