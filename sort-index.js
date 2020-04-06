@@ -2,6 +2,8 @@ window.onload = function(){
     const generateBlockBtn = document.getElementById('generateBlockBtn');
     const bubbleSortBtn = document.getElementById('bubbleSortBtn');
     const selectionSortBtn = document.getElementById('selectionSortBtn');
+    const insertionSortBtn = document.getElementById('insertionSortBtn');
+    
     let isSearchInProcess = false;
 
     function initializeBlocks(){
@@ -35,6 +37,7 @@ window.onload = function(){
         }
 
         setSearchInProgressDisableHeader(true);
+        
         const promise = bubbleSort();
 
         promise.then(() => {
@@ -52,7 +55,26 @@ window.onload = function(){
         }
 
         setSearchInProgressDisableHeader(true);
+        
         const promise = selectionSort();
+
+        promise.then(() => {
+            setSearchInProgressDisableHeader(false);
+        })
+        .catch((error) => {
+            console.log(error);
+            setSearchInProgressDisableHeader(false);
+        })
+    }
+
+    function handleInsertionSortBtnClick(){
+        if(isSearchInProcess){
+            return false;
+        }
+
+        setSearchInProgressDisableHeader(true);
+        
+        const promise = insertionSort();
 
         promise.then(() => {
             setSearchInProgressDisableHeader(false);
@@ -67,4 +89,5 @@ window.onload = function(){
     generateBlockBtn.addEventListener('click', initializeBlocks);
     bubbleSortBtn.addEventListener('click', handleBubbleSortBtnClick);
     selectionSortBtn.addEventListener('click', handleSelectionSortBtnClick);
+    insertionSortBtn.addEventListener('click', handleInsertionSortBtnClick);
 }
