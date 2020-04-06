@@ -14,7 +14,7 @@ function findMinNumberLocation(blockElements, min, n){
             await new Promise((resolve) => {
                 setTimeout(() => {
                     resolve()
-                }, 500)
+                }, 700)
             })
             
             element2.classList.remove('highlight');
