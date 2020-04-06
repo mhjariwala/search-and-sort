@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./common.css" />
     <link rel="stylesheet" type="text/css" href="./sort.css" />
     <script src="./common-function.js"></script>
@@ -17,19 +18,24 @@
                 <a class="link" href='./index.html'>< Back</a>
             </div>
             <div class="control-container">
-                <div class="input-container">
-                    <label for="dataSetSize">Size</label>
-                    <input id="dataSetSize" type="number" step="1" />
+                <div class="dataset-generate-controllers">
+                    <div class="input-container">
+                        <label for="dataSetSize">Size</label>
+                        <input id="dataSetSize" type="number" step="1" />
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="maxValue">Max Number</label>
+                        <input id="maxValue" type="number" step="1" />
+                    </div>
+    
+                    <button class="btn-style" id="generateBlockBtn">Generate</button>
                 </div>
-
-                <div class="input-container">
-                    <label for="maxValue">Max Number</label>
-                    <input id="maxValue" type="number" step="1" />
+                
+                <div class="visualization-controllers">
+                    <button class="btn-style" id="bubbleSortBtn">Bubble Sort</button>
+                    <button class="btn-style" id="selectionSortBtn">Selection Sort</button>
                 </div>
-
-                <button class="btn-style" id="generateBlockBtn">Generate</button>
-                <button class="btn-style" id="bubbleSortBtn">Bubble Sort</button>
-                <button class="btn-style" id="selectionSortBtn">Selection Sort</button>
             </div>
         </nav>
     </header>
