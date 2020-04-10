@@ -3,11 +3,11 @@
   flex-wrap: wrap;  
 }
 
-.blocks-wrapper {
+/* .blocks-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-}
+} */
 
 .block-container {
   margin-bottom: 10px;
@@ -37,13 +37,6 @@
 .index-container.highlight {
   border: medium solid blue;
   border-radius: 50%;
-}
-
-.main-header-container {
-  height: 50px;
-  display: flex;
-  margin-bottom: 10px;
-  justify-content: center; 
 }
 
 .box-container {

@@ -47,7 +47,7 @@ function getMidIndex(low, high){
 async function binarySearch(searchValue){
     const binarySearchPromise = new Promise(async (resolve, reject) => {
         const blockContainers = document.getElementsByClassName('block-container');
-        
+    
         if(!blockContainers){
             reject('NOT_FOUND');
             return;

@@ -4,16 +4,97 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./common.css" />
+        <link rel="stylesheet" type="text/css" href="./search.css" />
+        <link rel="stylesheet" type="text/css" href="./sort.css" />
         <link rel="stylesheet" type="text/css" href="./index.css" />
+
+        <script src="./common-function.js"></script>
+        <script src="./bubble-sort.js"></script>
+        <script src="./selection-sort.js"></script>
+        <script src="./insertion-sort.js"></script>
+        <script src="./sort-index.js"></script>
+        <script src="./linear-search.js"></script>
+        <script src="./binary-search.js"></script>
+        <script src="./search-index.js"></script>
+        <script src="./index.js"></script>
     </head>
 
     <body>
         <main class="main-page">
-            <div>
-                <h1>Searching and Sorting Visualization</h1>
-                <div class="links">
-                    <h2 class="link-container"><a href="./search.html">Search</a></h2>
-                    <h2 class="link-container"><a href="./sort.html">Sort</a></h2>
+            <header>
+                <h2>Searching and Sorting Visualization</h2>
+                <div class="dataset-generate-controllers">
+                    <div class="input-container">
+                        <label for="dataSetSize">Size</label>
+                        <input id="dataSetSize" type="number" step="1" />
+                    </div>
+        
+                    <div class="input-container">
+                        <label for="maxValue">Max Number</label>
+                        <input id="maxValue" type="number" step="1"/>
+                    </div>
+                    <button class="btn-style" id="generateBlockBtn">Generate</button>
+                </div>
+            </header>
+            <div class="search-and-sort-visualier-wrapper">
+                <div class="algorithm-wrapper">
+                    <div>
+                        <div class="visualization-controllers">
+                            <div class="input-container">
+                                <label for="searchNumberInput">Search Number</label>
+                                <input id="searchNumberInput" type="number" step="1" />
+                            </div>
+            
+                            <button class="btn-style" id="linearSearchBtn">Linear Search</button>
+                            <button class="btn-style" id="binarySearchBtn">Binary Search</button>
+                        </div>
+                        <div class="search-result-container">
+                            <div class="low-mid-high-section hidden">
+                                <div class="box-container">
+                                    <div>Low</div>
+                                    <div id="lowIndexValue" class="box">
+                                    </div>
+                                </div>
+                    
+                                <div class="box-container">
+                                    <div>Mid</div>
+                                    <div id="midIndexValue" class="box">
+                                    </div>
+                                </div>
+                    
+                                <div class="box-container">
+                                    <div>High</div>
+                                    <div id="highIndexValue" class="box">
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="box-container">
+                                <div>Search Value</div>
+                                <div id="valueToSearch" class="box"></div>
+                            </div>
+                
+                            <div class="box-container">
+                                <label>Result</label>
+                                <div id="result" class="box"></div>
+                            </div>
+                        </div>
+                                
+                        <div class="search-visualizer-container" id="searchVisualizerContainer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="algorithm-wrapper">
+                    <div class="visualization-controllers">
+                        <button class="btn-style" id="bubbleSortBtn">Bubble Sort</button>
+                        <button class="btn-style" id="selectionSortBtn">Selection Sort</button>
+                        <button class="btn-style" id="insertionSortBtn">Insertion Sort</button>
+                    </div>
+
+                    <div class="sort-visualizer-container" id="sortVisualizerContainer">    
+                    </div>
                 </div>
             </div>
         </main>

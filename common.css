@@ -1,32 +1,3 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-}
-
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-header {
-    min-height: 50px;
-    padding: 10px;
-}
-
-main {
-    height: calc(100vh - 50px);
-    padding: 10px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .control-container {
     display: flex;
     align-items: center;
@@ -35,6 +6,7 @@ header nav {
 
 .dataset-generate-controllers {
     display: flex;
+    justify-content: center;
     margin-bottom: 5px;
 }
 
