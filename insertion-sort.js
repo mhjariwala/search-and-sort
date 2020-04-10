@@ -1,16 +1,18 @@
 function swapForInsertionSort(element1, element2){
     return new Promise((resolve) => {
-        const container = document.getElementById('blockContainer');
+        const container = document.getElementById('sortVisualizerContainer');
         const element1Transform = element1.style.transform;
         const element2Transform = element2.style.transform;
 
         element1.style.transform = element2Transform;
         element2.style.transform = element1Transform;
 
-        setTimeout(() => {
-            container.insertBefore(element2, element1);
-            resolve()
-        }, 1000);
+        window.requestAnimationFrame(() => {
+            setTimeout(() => {
+                container.insertBefore(element2, element1);
+                resolve()
+            }, 500);
+        })
     })
 }
 
@@ -40,7 +42,7 @@ function insertionSort(){
                 await new Promise((resolve) => {
                     setTimeout(() => {
                         resolve();
-                    }, 700)
+                    }, 300)
                 });
 
                 if(currentNumber >= previousNumber){

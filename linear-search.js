@@ -15,8 +15,8 @@ async function linearSearch(searchValue){
     const linearSearchPromise = new Promise(async (resolve, reject) => {
         const blockContainers = document.getElementsByClassName('block-container');
         let index = 0;
-        
-        if(!blockContainers){
+
+        if(!blockContainers || !blockContainers.length){
             reject('NOT_FOUND');
             return;
         }
@@ -27,7 +27,7 @@ async function linearSearch(searchValue){
             const indexContainer = blockContainer.querySelector('.index-container');
             const number = Number(block.getAttribute('data-number'));
             
-            if(number <= searchValue){
+            // if(number <= searchValue){
                 await highlightBlockAndIndex(block, indexContainer);
                 
                 if(number === searchValue){
@@ -36,7 +36,7 @@ async function linearSearch(searchValue){
                 }
 
                 continue;
-            }
+            // }
 
             break;
         }

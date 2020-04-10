@@ -3,7 +3,7 @@ const SIZE = 10;
 
 function sortRandomNumbers(randomNumbers){
     if(!randomNumbers) {
-        return; 
+        return []; 
     }
     
     const sortedNumbers = JSON.parse(JSON.stringify(randomNumbers))
@@ -48,7 +48,7 @@ function generateRandomNumbers() {
     }
 
     while (start <= size) {
-        const number = Math.floor(Math.random() * (maxValue - 10));
+        const number = Math.floor(Math.random() * (maxValue));
         randomNumbers.push(number);
         start++;
     }
@@ -56,8 +56,8 @@ function generateRandomNumbers() {
     return randomNumbers;
 }
 
-function generateBlocks(randomNumbers, containerId){
-    const containerEl = document.getElementById(containerId)
+function generateBlocks(randomNumbers){
+    const containerEl = document.getElementById('searchVisualizerContainer')
 
     if(!containerEl){
         return;
@@ -87,16 +87,22 @@ function generateBlocks(randomNumbers, containerId){
     })
 }
 
-function getBlockElementHeight(number, maxNumber){
-  let height = (number * 100) / maxNumber;
-  height += 5;
+function getBlockElementHeight(number, maxNumber){ 
+const sortVisualizerContainer = document.getElementById('sortVisualizerContainer');
+const containerHeight = sortVisualizerContainer.offsetHeight;
+
+let height = (number * containerHeight) / maxNumber;
+//   height ;
   return Math.floor(height);
 }
 
-function generateBlockForSort(randomNumbers, containerId, maxNumber){
-    const containerEl = document.getElementById(containerId)
 
-    if(!containerEl){
+function generateBlockForSort(randomNumbers){
+    const containerEl = document.getElementById('sortVisualizerContainer')
+    const maxValueEl = document.getElementById('maxValue') 
+    const maxNumber = isValidNumber(maxValue.value) ? Number(maxValue.value) : DEFAULT_MAX_NUMBER
+    
+    if(!containerEl || !maxValueEl){
         return;
     }
 
@@ -108,11 +114,14 @@ function generateBlockForSort(randomNumbers, containerId, maxNumber){
         const textNode = document.createTextNode(number);
         const blockHeight = getBlockElementHeight(number, maxNumber)
         const shiftBlockContainer = `translateX(${index * 30}px)`;
-        
+        const sortVisualizerContainer = document.getElementById('sortVisualizerContainer');
+        const containerHeight = sortVisualizerContainer.offsetHeight;
+
         blockElement.className = 'block';
-        blockElement.style.height = blockHeight + '%';
+        blockElement.style.height = blockHeight + 'px';
         blockElementContainer.className = 'block-element-container';
         
+        blockElementContainer.style.height = containerHeight + 'px';
         blockElementContainer.style.transform = shiftBlockContainer;
         blockElementContainer.setAttribute('data-number', number);
         blockElementContainer.appendChild(blockElement);

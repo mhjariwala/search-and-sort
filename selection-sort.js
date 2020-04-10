@@ -56,7 +56,7 @@ function swapForSelectionSort(config){
             element1.classList.remove('highlight');
             element2.classList.remove('highlight');
             resolve();
-            }, 1000);
+            }, 600);
         });
     })
 }
@@ -69,7 +69,7 @@ function selectionSort(){
             reject('NOT_ENOUGH_ELEMENT');
             return;
         }
-        const container = document.getElementById('blockContainer');
+        const container = document.getElementById('sortVisualizerContainer');
         const noOfBlockElements = blockElements.length;
 
         for (let index = 0; index < (noOfBlockElements - 1); index++) {

@@ -1,6 +1,6 @@
 function swap(el1, el2) {
     return new Promise(resolve => {
-      const container = document.getElementById('blockContainer');
+      const container = document.getElementById('sortVisualizerContainer');
       const transform1 = el1.style.transform;
       const transform2 = el2.style.transform;
   
@@ -39,7 +39,7 @@ function bubbleSort(){
               await new Promise(resolve =>
                   setTimeout(() => {
                   resolve();
-                  }, 500)
+                  }, 400)
               );
 
               const value1 = Number(currentBlockContainer.getAttribute('data-number'));
